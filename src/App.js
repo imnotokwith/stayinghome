@@ -64,7 +64,7 @@ class App extends Component {
     }
 
     componentWillMount() {
-        const list = window.location.search
+        const search = window.location.search
             .replace(/^\?/, '')
             .split('&')
             .map(pair => {
@@ -75,10 +75,13 @@ class App extends Component {
                 };
             })
             .filter(x => x.key === 'list')
-            .map(x => JSON.parse(b64DecodeUnicode(x.value)))[0];
-        list.sections.dayOf.date = moment(list.sections.dayOf.date);
-        console.log(list);
-        this.setState(list);
+            .map(x => JSON.parse(b64DecodeUnicode(x.value)));
+
+        if (search.length) {
+            const list = search[0];
+            list.sections.dayOf.date = moment(list.sections.dayOf.date);
+            this.setState(list);
+        }
     }
 
     componentWillUpdate(nextProps, nextState) {

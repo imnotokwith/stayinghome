@@ -21598,7 +21598,7 @@
 	    _createClass(App, [{
 	        key: 'componentWillMount',
 	        value: function componentWillMount() {
-	            var list = window.location.search.replace(/^\?/, '').split('&').map(function (pair) {
+	            var search = window.location.search.replace(/^\?/, '').split('&').map(function (pair) {
 	                var _pair$split = pair.split('='),
 	                    _pair$split2 = _slicedToArray(_pair$split, 2),
 	                    key = _pair$split2[0],
@@ -21612,10 +21612,13 @@
 	                return x.key === 'list';
 	            }).map(function (x) {
 	                return JSON.parse(b64DecodeUnicode(x.value));
-	            })[0];
-	            list.sections.dayOf.date = (0, _moment2.default)(list.sections.dayOf.date);
-	            console.log(list);
-	            this.setState(list);
+	            });
+
+	            if (search.length) {
+	                var list = search[0];
+	                list.sections.dayOf.date = (0, _moment2.default)(list.sections.dayOf.date);
+	                this.setState(list);
+	            }
 	        }
 	    }, {
 	        key: 'componentWillUpdate',
