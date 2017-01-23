@@ -1,0 +1,19 @@
+.container {
+
+}
+
+.firstLine {
+}
+
+.firstLine, .input {
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.input {
+    width: 100%;
+    border-style: solid;
+    border-color: gray;
+    border-width: 0;
+    border-bottom-width: 1px;
+}

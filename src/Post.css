@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.post-link {
+  font-family: 'Open Sans', sans-serif;
+  display: inline-block;
+  background-color: #3B5998;
+  color: #FFFFFF;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.facebook-icon {
+  vertical-align: middle;
+  padding-left: 1rem;
+}
