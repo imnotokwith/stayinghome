@@ -1,5 +1,6 @@
 import React from 'react';
 import createStyledComponent from 'react-css-modules';
+import { getResource as r } from './resources';
 import styles from './Post.css';
 
 class Tweet extends React.Component {
@@ -18,7 +19,7 @@ class Tweet extends React.Component {
     return (
       <div>
         <a styleName="post-link" href="#" onClick={post}>
-          Review and Post
+          {r('share.facebook')}
           <i className="fa fa-facebook fa-2x" styleName="facebook-icon"/>
         </a>
       </div>

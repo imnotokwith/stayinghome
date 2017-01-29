@@ -8,7 +8,7 @@ class ListTitle extends Component {
         return (
             <header styleName="container">
                 <div styleName="firstLine">
-                    Checklist for
+                    {r('checklist.title.prefix')}
                 </div>
                 <input styleName="input" type="text" value={this.props.title} onChange={(ev) => this.props.onChange(ev.target.value)}/>
             </header>

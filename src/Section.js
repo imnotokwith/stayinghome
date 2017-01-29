@@ -66,7 +66,7 @@ class Section extends Component {
                 <header>
                     {title}
                     {showEditButtons && <button styleName="editButton" onClick={this.makeEditable}>
-                        <i className="fa fa-pencil-square" /> edit
+                        <i className="fa fa-pencil-square" /> {r('section.edit')}
                     </button>}
                 </header>
                 <ul styleName="list">
@@ -93,7 +93,7 @@ class Section extends Component {
             <article styleName="editable-container">
                 <header>
                     <button onClick={this.makeDisplayable} styleName="backButton">
-                        <i className="fa fa-chevron-left" /> Back
+                        <i className="fa fa-chevron-left" /> {r('section.back')}
                     </button>
                 </header>
                 <header>

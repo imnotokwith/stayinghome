@@ -25,35 +25,35 @@ class App extends Component {
         super();
 
         this.state = {
-            title: 'the march/rally/protest',
+            title: r('title'),
             sections: {
                 before: {
-                    title: 'Before',
+                    title: r('sections.before.title'),
                     items: [
-                        'Choose emergency meeting point',
-                        'Take photos of ID/drivers license',
+                        r('sections.before.items[0]'),
+                        r('sections.before.items[1]'),
                     ],
                 },
                 dayOf: {
                     isDatePicked: false,
                     date: moment().add(7, 'days').startOf('day'),
                     items: [
-                        'Cash',
-                        'Water bottle',
-                        'Snacks',
-                        'Scarf or bandana',
-                        'Leave pocket knife at home',
-                        'Remove fingerprints from phone',
-                        'Remove unnecessary stuff from wallet',
-                        'Write phone number for lawyer on right arm',
-                        'Write phone number for emergency contact on left arm',
-                        'Write "EMERGENCY" on left hand with arrow pointing up arm',
+                        r('sections.dayOf.items[0]'),
+                        r('sections.dayOf.items[1]'),
+                        r('sections.dayOf.items[2]'),
+                        r('sections.dayOf.items[3]'),
+                        r('sections.dayOf.items[4]'),
+                        r('sections.dayOf.items[5]'),
+                        r('sections.dayOf.items[6]'),
+                        r('sections.dayOf.items[7]'),
+                        r('sections.dayOf.items[8]'),
+                        r('sections.dayOf.items[9]'),
                     ],
                 },
                 notes: {
-                    title: 'Notes',
+                    title: r('sections.notes.title'),
                     items: [
-                        'Resist without violence',
+                        r('sections.notes.items[0]'),
                     ],
                 }
             }
@@ -61,7 +61,6 @@ class App extends Component {
 
         this.onTitleChange = this.onTitleChange.bind(this);
         this.onSectionChange = this.onSectionChange.bind(this);
-        this.share = this.share.bind(this);
     }
 
     componentWillMount() {
@@ -88,7 +87,7 @@ class App extends Component {
     componentWillUpdate(nextProps, nextState) {
         const list = b64EncodeUnicode(JSON.stringify(nextState));
         const [ url ] = window.location.href.split(/\?/);
-        window.history.pushState(null, `Checklist for ${nextState.title}`, `${url}?list=${list}`);
+        window.history.pushState(null, r('checklist.title')(nextState.title), `${url}?list=${list}`);
     }
 
     onTitleChange(title) {
@@ -103,10 +102,6 @@ class App extends Component {
                 [key]: section,
             }),
         });
-    }
-
-    share() {
-
     }
 
     render() {
@@ -131,11 +126,11 @@ class App extends Component {
                     </article>
                 </div>
                 <div styleName="actions">
-                    <Share enabled={true} message={`Checklist for ${this.state.title}. #ImNotOkWith staying home`} location={window.location.href}/>
+                    <Share enabled={true} message={r('share.message')(this.state.title)} location={window.location.href}/>
                 </div>
                 <footer>
                     <div>
-                        #ImNotOkayWith staying home
+                        {r('footer.title')}
                     </div>
                     <div>
                         <a href="//imnotokwith.com/stayinghome">

@@ -1,6 +1,7 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import createStyledComponent from 'react-css-modules';
+import { getResource as r } from './resources';
 import styles from './Tweet.css';
 
 class Tweet extends React.Component {
@@ -18,7 +19,7 @@ class Tweet extends React.Component {
     return (
       <div>
         <a styleName="tweet-link" href="#" onClick={tweet}>
-          Review and Tweet
+          {r('share.twitter')}
           <i className="fa fa-twitter fa-2x" styleName="twitter-icon"/>
         </a>
       </div>
