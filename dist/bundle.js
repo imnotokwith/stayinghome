@@ -21571,11 +21571,11 @@
 	        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
 	        _this.state = {
-	            title: 'the march',
+	            title: 'the march/rally/protest',
 	            sections: {
 	                before: {
 	                    title: 'Before',
-	                    items: ['Choose emergency meeting point']
+	                    items: ['Choose emergency meeting point', 'Take photos of ID/drivers license']
 	                },
 	                dayOf: {
 	                    isDatePicked: false,
