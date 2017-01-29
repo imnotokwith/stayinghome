@@ -25,13 +25,14 @@ class App extends Component {
         super();
 
         this.state = {
-            title: 'the march',
+            title: 'the march/rally/protest',
             sections: {
                 before: {
                     title: 'Before',
                     items: [
                         'Choose emergency meeting point',
-                    ]
+                        'Take photos of ID/drivers license',
+                    ],
                 },
                 dayOf: {
                     isDatePicked: false,
@@ -47,13 +48,13 @@ class App extends Component {
                         'Write phone number for lawyer on right arm',
                         'Write phone number for emergency contact on left arm',
                         'Write "EMERGENCY" on left hand with arrow pointing up arm',
-                    ]
+                    ],
                 },
                 notes: {
                     title: 'Notes',
                     items: [
                         'Resist without violence',
-                    ]
+                    ],
                 }
             }
         };
