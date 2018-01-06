@@ -133,8 +133,8 @@ class App extends Component {
                         {r('footer.title')}
                     </div>
                     <div>
-                        <a href="//imnotokwith.com/stayinghome">
-                            imnotokwith.com/stayinghome
+                        <a href="//imnotokwith.github.io/stayinghome">
+                            imnotokwith.github.io/stayinghome
                         </a>
                     </div>
                 </footer>
