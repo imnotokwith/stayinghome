@@ -7,7 +7,7 @@ export default {
     'sections.dayOf.items[1]': 'Water bottle',
     'sections.dayOf.items[2]': 'Snacks',
     'sections.dayOf.items[3]': 'Scarf or bandana',
-    'sections.dayOf.items[4]': 'Leave pocket knife at home',
+    'sections.dayOf.items[4]': 'Leave pocket knife, pepper spray, etc. at home',
     'sections.dayOf.items[5]': 'Remove fingerprints from phone',
     'sections.dayOf.items[6]': 'Remove unnecessary stuff from wallet',
     'sections.dayOf.items[7]': 'Write phone number for lawyer on right arm',
